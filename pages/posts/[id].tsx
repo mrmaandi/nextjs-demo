@@ -21,9 +21,7 @@ const PostPage = (props: { post: PostWithAuthor }) => {
   });
 
   if (!props.post) {
-    return <div>
-      Post not found
-    </div>
+    return <div>Post not found</div>
   }
 
   return (

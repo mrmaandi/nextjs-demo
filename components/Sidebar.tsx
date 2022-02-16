@@ -7,11 +7,15 @@ const Sidebar = () => {
             <Link href="/">
                 <a>All posts</a>
             </Link>
-            <Link href="/posts">
+            <Link href="/user-posts">
                 <a>My posts</a>
             </Link>
-            <Link href="/comments">
+            <Link href="/user-comments">
                 <a>My comments</a>
+            </Link>
+            <hr />
+            <Link href="/new-post">
+                <a>Add new post</a>
             </Link>
         </>
     );

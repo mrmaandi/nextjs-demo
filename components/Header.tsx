@@ -1,5 +1,4 @@
-import { useSession, signOut, signIn } from "next-auth/react";
-import Link from "next/link";
+import { signIn, signOut, useSession } from "next-auth/react";
 import { Avatar } from "primereact/avatar";
 import { Button } from "primereact/button";
 
@@ -21,9 +20,9 @@ const Header = (): JSX.Element => {
           )}
           {session?.user?.name}
           {session?.user ? (
-            <Button className="p-button-outlined" onClick={() => signOut()}>Logout</Button>
+            <Button className="p-button-outlined p-button-sm" onClick={() => signOut()}>Logout</Button>
           ) : (
-            <Button onClick={() => signIn()}>Login</Button>
+            <Button className="p-button-sm" onClick={() => signIn()}>Login</Button>
           )}
         </div>
       </div>

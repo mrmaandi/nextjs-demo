@@ -39,16 +39,15 @@ export default function handler(
 
   session
     .then((ses) => {
-        prisma.post.create({
-            data: {
-                title: req.title,
-                content: req.description,
-                authorId: ses!.userId,
-            },
-        })
+      prisma.post.create({
+        data: {
+          title: req.title,
+          content: req.description,
+          authorId: ses!.userId,
+        },
+      })
         .then((res) => {
-            return response.status(200).json({ message: res });
+          return response.status(200).json({ message: res });
         });
     })
-    
 }
